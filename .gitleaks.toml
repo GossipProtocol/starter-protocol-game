@@ -1,0 +1,23 @@
+# gitleaks config for this repo. Everything allowlisted here is public by construction.
+title = "starter-protocol-game"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Public identifiers that are not secrets"
+paths = [
+  # Doppler submodule, forge build output and installed packages are not part of this repo's history.
+  '''packages/contracts/lib/''',
+  '''packages/contracts/out/''',
+  '''packages/contracts/cache/''',
+  '''node_modules/''',
+]
+regexes = [
+  # 20-byte EVM addresses (public stock tokens, Chainlink feeds, Doppler modules, USDG). A key is 32 bytes.
+  '''\b0x[0-9a-fA-F]{40}\b''',
+  # Anvil's published default dev keys (#0, #1, #2), used only against the local fork.
+  '''0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80''',
+  '''0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d''',
+  '''0x5de4111afa1a4b94908f83103eb1f1706367c2e68ca870fc3fb9a804cdab365a''',
+]

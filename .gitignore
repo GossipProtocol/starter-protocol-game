@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.env
+.env.local
+packages/contracts/out/
+packages/contracts/cache/
+packages/contracts/broadcast/*/31337/
+packages/contracts/broadcast/*/4663/dry-run/
+apps/indexer/.ponder/
+apps/indexer/generated/
+deployments/local.json
+*.log

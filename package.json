@@ -1,0 +1,20 @@
+{
+  "name": "starter-protocol-game",
+  "private": true,
+  "packageManager": "pnpm@10.33.0",
+  "scripts": {
+    "build": "pnpm -r --filter ./packages/** build",
+    "test": "pnpm -r test",
+    "typecheck": "pnpm -r typecheck",
+    "contracts:build": "cd packages/contracts && forge build",
+    "contracts:test": "cd packages/contracts && forge test",
+    "abis": "pnpm --filter @beeef/contracts abis",
+    "fork": "bash scripts/local-fork.sh",
+    "fork:smoke": "cd packages/contracts && forge script script/LocalSmoke.s.sol --rpc-url http://127.0.0.1:8545 --broadcast --slow --gas-estimate-multiplier 300"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.8",
+    "@types/node": "^22.10.0"
+  }
+}

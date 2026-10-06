@@ -1,0 +1,36 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+test = "test"
+solc = "0.8.26"
+evm_version = "cancun"
+via_ir = true
+optimizer = true
+optimizer_runs = 200
+bytecode_hash = "none"
+# Doppler's DopplerHookInitializer is deployed to a hook-flagged address with deployCodeTo in local tests.
+gas_limit = "18446744073709551615"
+# BeeefRoundFactory sits near the EIP-170 limit; optimize it for size.
+additional_compiler_profiles = [{ name = "size", optimizer_runs = 1 }]
+compilation_restrictions = [{ paths = "src/BeeefRoundFactory.sol", optimizer_runs = 1 }]
+fs_permissions = [{ access = "read", path = "./" }, { access = "read-write", path = "../sdk/test" }, { access = "read-write", path = "../../deployments" }]
+
+[profile.default.fuzz]
+runs = 256
+
+[rpc_endpoints]
+robinhood = "${ROBINHOOD_RPC_URL}"
+
+[fmt]
+bracket_spacing = true
+int_types = "long"
+line_length = 120
+multiline_func_header = "params_first_multi"
+number_underscore = "thousands"
+quote_style = "double"
+tab_width = 4
+sort_imports = true
+
+[lint]
+lint_on_build = false

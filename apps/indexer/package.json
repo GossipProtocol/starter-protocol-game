@@ -1,0 +1,19 @@
+{
+  "name": "@beeef/indexer",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "ponder dev",
+    "start": "ponder start --schema beeef_indexer --views-schema beeef",
+    "codegen": "ponder codegen",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@beeef/config": "workspace:*",
+    "@beeef/sdk": "workspace:*",
+    "ponder": "^0.17.10",
+    "hono": "^4.6.0",
+    "viem": "^2.21.0"
+  }
+}

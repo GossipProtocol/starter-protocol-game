@@ -1,0 +1,3 @@
+[submodule "lib/doppler"]
+	path = packages/contracts/lib/doppler
+	url = https://github.com/whetstoneresearch/doppler.git

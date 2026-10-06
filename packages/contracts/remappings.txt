@@ -1,0 +1,15 @@
+forge-std/=lib/doppler/lib/forge-std/src/
+@solady/=lib/doppler/lib/solady/src/
+@v4-core/=lib/doppler/lib/v4-periphery/lib/v4-core/src/
+@v4-core-test/=lib/doppler/lib/v4-periphery/lib/v4-core/test/
+@v4-periphery/=lib/doppler/lib/v4-periphery/src/
+@openzeppelin/=lib/doppler/lib/v4-core/lib/openzeppelin-contracts/contracts/
+@solmate/=lib/doppler/lib/v4-core/lib/solmate/src/
+doppler/=lib/doppler/src/
+lib/doppler/:src/=lib/doppler/src/
+lib/doppler/:@uniswap/v4-core/=lib/doppler/lib/v4-periphery/lib/v4-core/
+lib/doppler/:@uniswap/v2-core/contracts/interfaces/=lib/doppler/src/interfaces/
+lib/doppler/lib/v4-periphery/:@openzeppelin/=lib/doppler/lib/v4-core/lib/openzeppelin-contracts/
+lib/doppler/lib/v4-core/:@openzeppelin/=lib/doppler/lib/v4-core/lib/openzeppelin-contracts/
+lib/doppler/lib/v4-periphery/lib/v4-core/:forge-std/=lib/doppler/lib/forge-std/src/
+permit2/=lib/doppler/lib/v4-periphery/lib/permit2/
