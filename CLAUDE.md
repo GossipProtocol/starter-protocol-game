@@ -31,7 +31,7 @@ Contracts live in `packages/contracts` (paths below are relative to it).
   rematch of a finished one-off; never automatic; one per round), `settle(roundId)` (migrates both entries).
 - `src/BeeefRegistry.sol`: admin config the factory reads (stock allowlist and feeds, durations, market calendar, pool
   config, oracle/clock settings, min seed, platform fee, course fee). Split out to keep the factory under EIP-170.
-- `src/CourseFee.sol`: the course fee rate and recipient. One file, the default the course relies on.
+- `src/CourseFee.sol`: the course fee rate and recipient. One file, the default.
 - `src/libraries/`: `BeeefCalendar` (weekly close + holidays), `BeeefEntryData` (linked: Airlock CreateParams builder,
   oracle clone + init). Linked library functions are how the factory stays small.
 - `src/BeeefFeeSplitter.sol`: one clone per series; the Airlock integrator for its rounds. Course fee, platform cut,

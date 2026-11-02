@@ -13,7 +13,7 @@ Every series pays **1% of its collected integrator fees** to the course wallet. 
 
 The deploy script refuses to run on any chain other than a local anvil fork if the recipient is the zero address, so the fee cannot be dropped on the way to production.
 
-The fee is a default, not a license condition. This code is MIT licensed, so you can change it, but the fee is how the course pays for itself and the rate is small enough that most forks leave it. If you change the recipient or the rate, say so in your README.
+The fee is a default, not a license condition. This code is MIT licensed, so you can change it. If you change the recipient or the rate, say so in your README.
 
 ## What is in the box
 
